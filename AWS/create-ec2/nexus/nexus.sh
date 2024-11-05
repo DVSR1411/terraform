@@ -31,6 +31,5 @@ TimeoutSec=600
 WantedBy=multi-user.target
 EOF
 sudo yum install java-1.8.0-openjdk-devel -y
-systemctl daemon-reload
 systemctl enable nexus
 systemctl start nexus
