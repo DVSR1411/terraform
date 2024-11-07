@@ -30,6 +30,6 @@ TimeoutSec=600
 [Install]
 WantedBy=multi-user.target
 EOF
-sudo yum install java-1.8.0-openjdk-devel -y
+yum install java-1.8.0-amazon-corretto-devel -y
 systemctl enable nexus
 systemctl start nexus
