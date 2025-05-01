@@ -1,10 +1,10 @@
 #!/bin/bash
 yum update -y
 cd /opt
-wget https://download.sonatype.com/nexus/3/nexus-3.70.3-01-java8-unix.tar.gz
-tar -xvzf nexus-3.70.3-01-java8-unix.tar.gz
-rm -rf nexus-3.70.3-01-java8-unix.tar.gz
-mv nexus-3.70.3-01 nexus
+wget https://download.sonatype.com/nexus/3/nexus-3.70.4-02-java8-unix.tar.gz 
+tar -xvzf nexus-3.70.4-02-java8-unix.tar.gz
+rm -rf nexus-3.70.4-02-java8-unix.tar.gz
+mv nexus-3.70.4-02 nexus
 useradd nexus
 echo "nexus:Sathwik123" | chpasswd
 echo "nexus ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
