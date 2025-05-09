@@ -12,10 +12,5 @@ resource "aws_lambda_function" "test_lambda" {
   source_code_hash = data.archive_file.lambda_zip.output_base64sha256
   runtime         = "python3.9"
   timeout         = 5
-  environment {
-    variables = {
-      my_bucket = aws_s3_bucket.my_bucket.id
-      region = data.aws_region.current.name
-    }
-  }
+  depends_on = [aws_dynamodb_table.mydb, aws_iam_role.lambda_role]
 }
