@@ -8,5 +8,7 @@ yum upgrade -y
 dnf install java-17-amazon-corretto -y
 yum install jenkins -y
 echo "jenkins ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
+service docker start
 systemctl enable jenkins
-systemctl start jenkins
+usermod -aG docker jenkins
+systemctl restart jenkins
