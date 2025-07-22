@@ -9,3 +9,6 @@ resource "aws_sagemaker_notebook_instance" "myni" {
     Name = "demo"
   }
 }
+output "endpoint" {
+  value = "https://${aws_sagemaker_notebook_instance.myni.url}/lab"
+}
